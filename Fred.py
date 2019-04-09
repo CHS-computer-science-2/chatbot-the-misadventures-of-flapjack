@@ -1,19 +1,22 @@
 from textblob import TextBlob
+greetings = ["hi","hello","hey","sup"]
+userinput = input()
 
-def response(userinput):
-    
-    greetings = ["hi","hello","hey","how are you","whats up","its good to see you"]
-    aQue = ["how are you doing","how are you","are you doing well","whats been good"]
-    aAdj = ["good","bad","well","terrible","great","horrible","excellent","fine","swell","ok"]
+def greeting_response(use):
+    if userinput.lower() in greetings:
+        return print(input_classify(greetings))
 
+def input_classify():
+    userinputT = TextBlob(userinput)
+    UIC = userinputT.classify()
+    if UIC is 'pos':
+        return 
+    return 
     
-    
-    return TextBlob(userinput)
-
 def main():
-
      while True:
-        userInput = input(" ")
-        input(response(userInput))
-        
-main()
+        userinput = input()
+        greeting_response()
+
+input_classify()
+
